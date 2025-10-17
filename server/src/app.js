@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
     cors({
-    origin: ["https://quiz-app-frontend-q5ti.onrender.com"], // your frontend Render domain
+    origin: ["https://quiz-app-frontend-wcv2.onrender.com"], // your frontend Render domain
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   })
