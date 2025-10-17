@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "*", // ✅ Allow all origins
+    origin: "https://quiz-app-frontend-q5ti.onrender.com", // ✅ Allow all origins
   })
 );
 
