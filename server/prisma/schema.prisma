@@ -1,0 +1,97 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            Int            @id @default(autoincrement())
+  name          String
+  email         String         @unique
+  password      String
+  role          String         @default("USER")
+  createdAt     DateTime       @default(now())
+  results       Result[]
+  refreshTokens RefreshToken[]
+  userAnswers   UserAnswer[] // ✅ Added opposite relation
+}
+
+model RefreshToken {
+  id        Int      @id @default(autoincrement())
+  token     String   @unique
+  user      User     @relation(fields: [userId], references: [id])
+  userId    Int
+  expiresAt DateTime
+}
+
+model QuizMeta {
+  id              Int      @id @default(autoincrement())
+  title           String
+  instructions    String // full text (we’ll store bullet points separated by new lines)
+  durationMinutes Int
+  totalQuestions  Int
+  maxMarks        Int
+  negativeMarking Boolean  @default(false)
+  attemptsAllowed Int      @default(1)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model Quiz {
+  id              Int        @id @default(autoincrement())
+  title           String
+  totalMarks      Float      @default(100)
+  durationMinutes Int        @default(45)
+  totalQuestions  Int        @default(40)
+  isPublished     Boolean    @default(false)
+  questions       Question[]
+  results         Result[] // ✅ Add this line
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+}
+
+model Question {
+  id            Int          @id @default(autoincrement())
+  quiz          Quiz         @relation(fields: [quizId], references: [id])
+  quizId        Int
+  text          String
+  options       Json // Example: ["A text", "B text", "C text", "D text"]
+  correctOption Int // 0-3 index
+  marks         Float        @default(2.5)
+  createdAt     DateTime     @default(now())
+  userAnswers   UserAnswer[] // ✅ Added opposite relation
+}
+
+model UserAnswer {
+  id             Int      @id @default(autoincrement())
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId         Int
+  question       Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  questionId     Int
+  selectedOption Int
+  createdAt      DateTime @default(now())
+
+  @@unique([userId, questionId]) // ensures one answer per user per question
+  @@index([userId])
+  @@index([questionId])
+}
+
+model Result {
+  id               Int      @id @default(autoincrement())
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId           Int
+  quiz             Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  quizId           Int
+  score            Float
+  correctCount     Int
+  totalQuestions   Int
+  timeTakenSeconds Int
+  submittedAt      DateTime @default(now())
+
+  @@unique([userId, quizId]) // prevents duplicate submissions
+  @@index([userId])
+  @@index([quizId])
+}

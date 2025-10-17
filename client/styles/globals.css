@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/* ---------------------- */
+/* 🌈 Base Theme Colors   */
+/* ---------------------- */
+:root {
+  --color-blue-50: #eff6ff;
+  --color-indigo-100: #e0e7ff;
+  --color-gray-900: #111827;
+  --color-gray-50: #f9fafb;
+}
+
+/* ---------------------- */
+/* 🌙 Dark Mode Variables */
+/* ---------------------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-blue-50: #111827;
+    --color-indigo-100: #1e293b;
+    --color-gray-900: #f9fafb;
+    --color-gray-50: #111827;
+  }
+}
+
+/* ---------------------- */
+/* 🧱 Global Styles       */
+/* ---------------------- */
+body {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--color-blue-50),
+    var(--color-indigo-100)
+  );
+  color: var(--color-gray-900);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  @apply min-h-screen antialiased transition-colors duration-300 ease-in-out;
+}
+
+/* ---------------------- */
+/* ✨ Reusable Elements   */
+/* ---------------------- */
+input,
+button,
+select,
+textarea {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+/* 🎯 Responsive typography for better UX */
+h1,
+h2,
+h3,
+h4 {
+  @apply font-bold tracking-tight;
+}
+
+h1 {
+  @apply text-3xl md:text-4xl;
+}
+
+h2 {
+  @apply text-2xl md:text-3xl;
+}
+
+h3 {
+  @apply text-xl md:text-2xl;
+}
+
+p {
+  @apply text-base md:text-lg leading-relaxed;
+}
+
+/* 🎨 Card and Container Utilities */
+.card {
+  @apply bg-white shadow-lg rounded-xl p-6 dark:bg-gray-800;
+}
+
+.container {
+  @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+
+
