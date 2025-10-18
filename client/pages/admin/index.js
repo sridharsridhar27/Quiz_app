@@ -85,9 +85,9 @@ export default function AdminDashboard() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="min-h-screen py-12 px-4 flex justify-center bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-100 dark:from-gray-900 dark:to-gray-800"
+      className="min-h-screen py-12 px-4 flex justify-center bg-white"
     >
-      <Card className="w-full max-w-6xl p-8 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.12)] rounded-3xl border border-gray-200 dark:border-gray-700">
+      <Card className="w-full max-w-6xl p-8 bg-white shadow-2xl rounded-3xl border border-gray-200">
         <motion.h1
           initial={{ y: -10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -161,9 +161,9 @@ export default function AdminDashboard() {
                 transition: { staggerChildren: 0.05 },
               },
             }}
-            className="overflow-x-auto rounded-2xl border border-gray-200 dark:border-gray-700"
+            className="overflow-x-auto rounded-2xl border border-gray-200"
           >
-            <table className="min-w-full text-sm overflow-hidden">
+            <table className="min-w-full text-sm overflow-hidden bg-white">
               <thead className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
                 <tr>
                   <th className="p-4 text-left">#</th>
@@ -174,7 +174,7 @@ export default function AdminDashboard() {
                   <th className="p-4 text-center">Actions</th>
                 </tr>
               </thead>
-              <tbody className="bg-white dark:bg-gray-800">
+              <tbody className="bg-white">
                 {quizzes.map((quiz, index) => (
                   <motion.tr
                     key={quiz.id}
@@ -182,18 +182,18 @@ export default function AdminDashboard() {
                       hidden: { opacity: 0, y: 10 },
                       visible: { opacity: 1, y: 0 },
                     }}
-                    className="border-b border-gray-100 dark:border-gray-700 hover:bg-indigo-50/60 dark:hover:bg-gray-800/50 transition-all"
+                    className="border-b border-gray-100 hover:bg-indigo-50 transition-all"
                   >
-                    <td className="p-4 font-semibold text-gray-700 dark:text-gray-300">
+                    <td className="p-4 font-semibold text-gray-700">
                       {index + 1}
                     </td>
-                    <td className="p-4 font-medium text-gray-900 dark:text-gray-100">
+                    <td className="p-4 font-medium text-gray-900">
                       {quiz.title}
                     </td>
-                    <td className="p-4 text-gray-700 dark:text-gray-400">
+                    <td className="p-4 text-gray-700">
                       {quiz.durationMinutes} mins
                     </td>
-                    <td className="p-4 text-gray-700 dark:text-gray-400">
+                    <td className="p-4 text-gray-700">
                       {quiz.totalMarks}
                     </td>
 
@@ -255,5 +255,6 @@ export default function AdminDashboard() {
     </motion.div>
   );
 }
+
 
 

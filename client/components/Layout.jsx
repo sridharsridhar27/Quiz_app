@@ -4,8 +4,7 @@ import Navbar from "./Navbar";
 
 export default function Layout({ children }) {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-100 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 transition-all duration-500">
-      
+    <div className="relative min-h-screen overflow-hidden bg-white transition-all duration-500">
       {/* 🧭 Navbar */}
       <Navbar />
 
@@ -16,6 +15,7 @@ export default function Layout({ children }) {
     </div>
   );
 }
+
 
 
 

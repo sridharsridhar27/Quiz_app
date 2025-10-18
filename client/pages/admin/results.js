@@ -35,22 +35,18 @@ export default function AdminResultsPage() {
     }
   }
 
-  // ✅ Extract all unique quiz titles for the filter dropdown
+  // ✅ Extract all unique quiz titles
   const quizTitles = useMemo(() => {
     const titles = results.map((r) => r.quizTitle);
     return ["All", ...new Set(titles)];
   }, [results]);
 
-  // ✅ Handle Filter + Search
+  // ✅ Filter + Search
   useEffect(() => {
     let data = [...results];
-
-    // Filter by quiz
     if (selectedQuiz !== "All") {
       data = data.filter((r) => r.quizTitle === selectedQuiz);
     }
-
-    // Search by user name or email
     if (search.trim()) {
       const lower = search.toLowerCase();
       data = data.filter(
@@ -59,14 +55,13 @@ export default function AdminResultsPage() {
           r.email.toLowerCase().includes(lower)
       );
     }
-
     setFiltered(data);
   }, [results, selectedQuiz, search]);
 
   return (
-    <div className="min-h-screen py-10 bg-gradient-to-br from-indigo-50 to-purple-100 dark:from-gray-900 dark:to-gray-800 px-4">
-      <Card className="max-w-7xl mx-auto p-8 shadow-2xl bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border border-gray-200 dark:border-gray-700 rounded-2xl">
-        <h1 className="text-3xl md:text-4xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+    <div className="min-h-screen py-10 bg-white px-4">
+      <Card className="max-w-7xl mx-auto p-8 shadow-2xl bg-white border border-gray-200 rounded-2xl">
+        <h1 className="text-3xl md:text-4xl font-bold text-center mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
           📊 User Results Dashboard
         </h1>
 
@@ -74,7 +69,7 @@ export default function AdminResultsPage() {
         <div className="flex flex-col md:flex-row justify-between gap-4 mb-6">
           {/* Quiz Filter */}
           <select
-            className="w-full md:w-1/3 border border-gray-300 dark:border-gray-700 rounded-md px-3 py-2 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 shadow-sm"
+            className="w-full md:w-1/3 border border-gray-300 rounded-md px-3 py-2 bg-white text-gray-700 shadow-sm focus:ring-2 focus:ring-indigo-200"
             value={selectedQuiz}
             onChange={(e) => setSelectedQuiz(e.target.value)}
           >
@@ -111,7 +106,7 @@ export default function AdminResultsPage() {
             transition={{ duration: 0.5 }}
             className="overflow-x-auto"
           >
-            <table className="min-w-full border border-gray-200 dark:border-gray-700 rounded-lg text-sm">
+            <table className="min-w-full border border-gray-200 rounded-lg text-sm bg-white">
               <thead className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
                 <tr>
                   <th className="p-3 text-left">#</th>
@@ -133,18 +128,12 @@ export default function AdminResultsPage() {
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.25, delay: i * 0.02 }}
-                    className="border-b border-gray-100 dark:border-gray-800 hover:bg-indigo-50/60 dark:hover:bg-gray-800/50 transition-all"
+                    className="border-b border-gray-100 hover:bg-indigo-50 transition-all"
                   >
                     <td className="p-3">{i + 1}</td>
-                    <td className="p-3 font-medium text-gray-900 dark:text-gray-200">
-                      {r.name}
-                    </td>
-                    <td className="p-3 text-gray-700 dark:text-gray-400">
-                      {r.email}
-                    </td>
-                    <td className="p-3 text-gray-700 dark:text-gray-400">
-                      {r.quizTitle}
-                    </td>
+                    <td className="p-3 font-medium text-gray-900">{r.name}</td>
+                    <td className="p-3 text-gray-700">{r.email}</td>
+                    <td className="p-3 text-gray-700">{r.quizTitle}</td>
                     <td className="p-3 text-center text-indigo-600 font-semibold">
                       {r.score}
                     </td>
@@ -153,10 +142,10 @@ export default function AdminResultsPage() {
                       {r.correctCount}
                     </td>
                     <td className="p-3 text-center">{r.totalQuestions}</td>
-                    <td className="p-3 text-center text-sm text-gray-600 dark:text-gray-400">
+                    <td className="p-3 text-center text-sm text-gray-600">
                       {r.timeTakenSeconds}s
                     </td>
-                    <td className="p-3 text-center text-sm text-gray-600 dark:text-gray-400">
+                    <td className="p-3 text-center text-sm text-gray-600">
                       {new Date(r.submittedAt).toLocaleString()}
                     </td>
                   </motion.tr>
@@ -169,4 +158,3 @@ export default function AdminResultsPage() {
     </div>
   );
 }
-

@@ -43,14 +43,14 @@ export default function CreateQuizForm() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-indigo-50 to-purple-100 dark:from-gray-900 dark:to-gray-800 px-4">
+    <div className="flex items-center justify-center min-h-screen bg-white px-4">
       <motion.div
         initial={{ opacity: 0, y: 25 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="w-full max-w-md"
       >
-        <Card className="p-8 shadow-2xl rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
+        <Card className="p-8 shadow-2xl rounded-2xl bg-white">
           <h2 className="text-3xl font-extrabold text-center mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
             🧠 Create New Quiz
           </h2>
@@ -58,7 +58,7 @@ export default function CreateQuizForm() {
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Title */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
                 Quiz Title
               </label>
               <Input
@@ -72,7 +72,7 @@ export default function CreateQuizForm() {
 
             {/* Total Marks */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
                 Total Marks
               </label>
               <Input
@@ -87,7 +87,7 @@ export default function CreateQuizForm() {
 
             {/* Total Questions */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
                 Total Questions
               </label>
               <Input
@@ -102,7 +102,7 @@ export default function CreateQuizForm() {
 
             {/* Duration */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
                 Duration (minutes)
               </label>
               <Input
@@ -128,6 +128,5 @@ export default function CreateQuizForm() {
     </div>
   );
 }
-
 
 

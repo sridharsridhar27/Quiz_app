@@ -126,7 +126,7 @@ export default function QuizPlayer({ quiz, questions, quizId, onSubmitted }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="relative flex flex-col items-center justify-center h-[85vh] text-center"
+        className="relative flex flex-col items-center justify-center h-[85vh] text-center bg-white"
       >
         {/* 🎉 Confetti */}
         {showConfetti && windowSize.width > 0 && (
@@ -145,18 +145,18 @@ export default function QuizPlayer({ quiz, questions, quizId, onSubmitted }) {
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="bg-white dark:bg-gray-900 p-10 rounded-3xl shadow-2xl max-w-lg w-full"
+          className="bg-white p-10 rounded-3xl shadow-2xl max-w-lg w-full"
         >
           <motion.h2
             initial={{ y: -15, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-6"
+            className="text-3xl font-bold text-indigo-600 mb-6"
           >
             🏁 Quiz Submitted Successfully!
           </motion.h2>
 
-          <div className="space-y-4 text-left text-gray-800 dark:text-gray-100">
+          <div className="space-y-4 text-left text-gray-800">
             <ResultRow label="Total Questions" value={totalQuestions} delay={0.3} />
             <ResultRow label="Maximum Marks" value={maxMarks} delay={0.4} />
             <ResultRow
@@ -186,11 +186,11 @@ export default function QuizPlayer({ quiz, questions, quizId, onSubmitted }) {
             <ResultRow
               label="Time Taken"
               value={timeTakenFormatted}
-              color="text-gray-600 dark:text-gray-300"
+              color="text-gray-600"
               delay={0.9}
             />
           </div>
-               </motion.div>
+        </motion.div>
       </motion.div>
     );
   }
@@ -201,7 +201,7 @@ export default function QuizPlayer({ quiz, questions, quizId, onSubmitted }) {
       initial={{ opacity: 0, y: 25 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="w-full max-w-3xl mx-auto"
+      className="w-full max-w-3xl mx-auto bg-white"
     >
       {/* Progress Bar */}
       <div className="w-full bg-gray-200 rounded-full h-2 mb-6 overflow-hidden">
@@ -215,7 +215,7 @@ export default function QuizPlayer({ quiz, questions, quizId, onSubmitted }) {
 
       {/* Timer + Question Info */}
       <div className="flex items-center justify-between mb-6">
-        <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
+        <div className="text-sm text-gray-600 font-medium">
           Question {currentIndex + 1} of {totalQuestions}
         </div>
 
@@ -242,7 +242,7 @@ export default function QuizPlayer({ quiz, questions, quizId, onSubmitted }) {
               transition={{ ease: "linear", duration: 1 }}
             />
           </svg>
-          <div className="absolute inset-0 flex items-center justify-center text-xs font-mono text-gray-700 dark:text-gray-200">
+          <div className="absolute inset-0 flex items-center justify-center text-xs font-mono text-gray-700">
             {formatTime(secondsLeft)}
           </div>
         </div>
@@ -256,9 +256,9 @@ export default function QuizPlayer({ quiz, questions, quizId, onSubmitted }) {
           animate={{ opacity: 1, x: 0, scale: 1 }}
           exit={{ opacity: 0, x: -40, scale: 0.97 }}
           transition={{ duration: 0.35, ease: "easeInOut" }}
-          className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-xl"
+          className="bg-white p-6 rounded-2xl shadow-xl"
         >
-          <h3 className="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-100">
+          <h3 className="text-lg font-semibold mb-4 text-gray-800">
             {currentQuestion?.text}
           </h3>
 
@@ -275,11 +275,11 @@ export default function QuizPlayer({ quiz, questions, quizId, onSubmitted }) {
                   onClick={() => selectOption(currentQuestion.id, idx)}
                   className={`w-full text-left p-3 rounded-md border transition-all ${
                     selected
-                      ? "border-indigo-600 bg-indigo-50 dark:bg-indigo-900/40"
-                      : "border-gray-200 bg-white dark:bg-gray-800"
+                      ? "border-indigo-600 bg-indigo-50"
+                      : "border-gray-200 bg-white"
                   }`}
                 >
-                  <div className="font-medium text-gray-800 dark:text-gray-200">
+                  <div className="font-medium text-gray-800">
                     {String.fromCharCode(65 + idx)}. {opt}
                   </div>
                 </motion.button>
@@ -325,10 +325,11 @@ function ResultRow({ label, value, color = "", delay = 0.2 }) {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay }}
-      className="flex justify-between border-b border-gray-200 dark:border-gray-700 pb-1"
+      className="flex justify-between border-b border-gray-100 pb-1"
     >
       <span>{label}:</span>
       <span className={`font-semibold ${color}`}>{value}</span>
     </motion.div>
   );
 }
+

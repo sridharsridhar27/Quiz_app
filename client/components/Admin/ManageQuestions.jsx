@@ -71,9 +71,9 @@ export default function ManageQuestions() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="flex flex-col items-center min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-100 dark:from-gray-900 dark:to-gray-800 py-10 px-4"
+      className="flex flex-col items-center min-h-screen bg-white py-10 px-4"
     >
-      <Card className="w-full max-w-6xl bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow-2xl rounded-3xl p-8 border border-gray-200 dark:border-gray-700 transition-all">
+      <Card className="w-full max-w-6xl bg-white shadow-2xl rounded-3xl p-8 border border-gray-200 transition-all">
         <motion.h2
           initial={{ y: -10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -93,9 +93,7 @@ export default function ManageQuestions() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.4 }}
               className={`mb-6 text-center font-semibold ${
-                message.startsWith("✅")
-                  ? "text-green-600"
-                  : "text-red-600"
+                message.startsWith("✅") ? "text-green-600" : "text-red-600"
               }`}
             >
               {message}
@@ -125,7 +123,7 @@ export default function ManageQuestions() {
             }}
             className="overflow-x-auto"
           >
-            <table className="min-w-full border border-gray-200 dark:border-gray-700 rounded-2xl overflow-hidden text-sm">
+            <table className="min-w-full border border-gray-200 rounded-2xl overflow-hidden text-sm bg-white">
               <thead className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">
                 <tr>
                   <th className="p-3 text-left">#</th>
@@ -143,9 +141,9 @@ export default function ManageQuestions() {
                       hidden: { opacity: 0, y: 10 },
                       visible: { opacity: 1, y: 0 },
                     }}
-                    className="border-b border-gray-100 dark:border-gray-800 hover:bg-indigo-50/60 dark:hover:bg-gray-800/50 transition-all"
+                    className="border-b border-gray-100 hover:bg-indigo-50 transition-all"
                   >
-                    <td className="p-3 font-semibold text-gray-700 dark:text-gray-300">
+                    <td className="p-3 font-semibold text-gray-700">
                       {index + 1}
                     </td>
 
@@ -157,10 +155,10 @@ export default function ManageQuestions() {
                           onChange={(e) =>
                             setEditing({ ...editing, text: e.target.value })
                           }
-                          className="text-gray-900 dark:text-gray-100"
+                          className="text-gray-900"
                         />
                       ) : (
-                        <span className="font-medium text-gray-900 dark:text-gray-100">
+                        <span className="font-medium text-gray-900">
                           {q.text}
                         </span>
                       )}
@@ -182,10 +180,7 @@ export default function ManageQuestions() {
                             />
                           ))
                         : q.options.map((opt, i) => (
-                            <p
-                              key={i}
-                              className="text-gray-700 dark:text-gray-300"
-                            >
+                            <p key={i} className="text-gray-700">
                               • {opt}
                             </p>
                           ))}
@@ -207,7 +202,7 @@ export default function ManageQuestions() {
                           }
                         />
                       ) : (
-                        <span className="font-semibold text-indigo-600 dark:text-indigo-400">
+                        <span className="font-semibold text-indigo-600">
                           {q.correctOption}
                         </span>
                       )}

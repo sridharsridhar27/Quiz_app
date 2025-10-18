@@ -6,16 +6,13 @@ import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-100 dark:from-gray-900 dark:to-gray-800">
-      {/* ✨ Animated Background Blurs */}
-      
-
+    <div className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden bg-white px-4">
       {/* 🧭 Main Card */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="relative z-10 w-full max-w-md bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border border-gray-200 dark:border-gray-700 rounded-3xl shadow-2xl p-10 text-center"
+        className="relative z-10 w-full max-w-md bg-white border border-gray-200 rounded-3xl shadow-2xl p-10 text-center"
       >
         {/* 🎯 Title */}
         <motion.h1
@@ -32,7 +29,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="text-gray-700 dark:text-gray-300 mb-8 text-lg"
+          className="text-gray-700 mb-8 text-lg"
         >
           Register or login to begin your Quiz Journey
         </motion.p>
@@ -62,11 +59,13 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
-        className="mt-10 text-gray-500 dark:text-gray-400 text-sm"
+        className="mt-10 text-gray-500 text-sm"
       >
+        © 2025 Quinvest Quiz Platform
       </motion.p>
     </div>
   );
 }
+
 
 

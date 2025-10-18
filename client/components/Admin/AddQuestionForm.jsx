@@ -31,18 +31,12 @@ export default function AddQuestionForm() {
           headers: { Authorization: `Bearer ${token}` },
         });
 
-        // API should return { quiz, questions }
         const existingCount = Array.isArray(res.data.questions)
           ? res.data.questions.length
           : 0;
 
         setQuestionNumber(existingCount + 1);
-
-        // Optional: dynamic maxQuestions based on quiz metadata
-        // const quizTotalQuestions = res.data.quiz?.totalQuestions;
-        // if (quizTotalQuestions) setMaxQuestions(quizTotalQuestions);
-
-        setMaxQuestions(40); // default value
+        setMaxQuestions(40);
         setInitialized(true);
       } catch (err) {
         console.error("❌ Failed to load existing questions:", err);
@@ -69,7 +63,6 @@ export default function AddQuestionForm() {
       return;
     }
 
-    // Basic validation
     if (!question.trim() || options.some((o) => !o.trim())) {
       setMessage("⚠️ Please fill question and all options.");
       return;
@@ -93,15 +86,12 @@ export default function AddQuestionForm() {
         }
       );
 
-      // Success
       setMessage(`✅ Question ${questionNumber} added successfully!`);
 
-      // Reset inputs
       setQuestion("");
       setOptions(["", "", "", ""]);
       setCorrectOption(0);
 
-      // If this was the final question, redirect
       if (questionNumber >= maxQuestions) {
         setTimeout(() => {
           router.push(`/admin/manage-questions?quizId=${quizId}`);
@@ -109,7 +99,6 @@ export default function AddQuestionForm() {
         return;
       }
 
-      // Otherwise, go to next question
       setQuestionNumber((prev) => prev + 1);
     } catch (err) {
       console.error("❌ Error adding question:", err);
@@ -130,8 +119,8 @@ export default function AddQuestionForm() {
 
   /* --------------------------- RENDER UI --------------------------- */
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-indigo-50 to-purple-100 dark:from-gray-900 dark:to-gray-800">
-      <Card className="w-full max-w-xl p-8 shadow-2xl bg-white dark:bg-gray-800">
+    <div className="flex items-center justify-center min-h-screen bg-white">
+      <Card className="w-full max-w-xl p-8 shadow-2xl bg-white">
         <h2 className="text-2xl font-bold text-center mb-1">
           Add Questions for Quiz #{quizId}
         </h2>
@@ -139,15 +128,13 @@ export default function AddQuestionForm() {
         {/* Progress Bar */}
         <div className="my-4">
           <div className="flex justify-between mb-1">
-            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+            <span className="text-sm font-medium text-gray-700">
               Question {questionNumber} of {maxQuestions}
             </span>
-            <span className="text-sm text-gray-500 dark:text-gray-400">
-              {progressPercent}%
-            </span>
+            <span className="text-sm text-gray-500">{progressPercent}%</span>
           </div>
 
-          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
+          <div className="w-full bg-gray-200 rounded-full h-2.5 overflow-hidden">
             <div
               className="h-2.5 bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-500 ease-in-out"
               style={{ width: `${progressPercent}%` }}
@@ -186,7 +173,6 @@ export default function AddQuestionForm() {
           </div>
 
           <div className="flex gap-3 mt-4">
-            {/* Always a submit button — label changes for final question */}
             <Button
               type="submit"
               className="w-full bg-indigo-600 hover:bg-indigo-700"
@@ -216,6 +202,3 @@ export default function AddQuestionForm() {
     </div>
   );
 }
-
-
-

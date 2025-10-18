@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import  {api}  from "@/lib/api";
+import { api } from "@/lib/api";
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter } from "next/router";
 import { Card } from "@/components/ui/card";
@@ -32,27 +32,36 @@ export default function QuizzesPage() {
   }
 
   return (
-    <div className="min-h-screen py-12 bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen py-12 bg-white">
       <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-3xl font-bold mb-6">Select a Quiz</h1>
+        <h1 className="text-3xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+          Select a Quiz
+        </h1>
 
         {loadingList ? (
-          <p>Loading...</p>
+          <p className="text-gray-600">Loading...</p>
         ) : quizzes.length === 0 ? (
-          <p>No quizzes are published yet.</p>
+          <p className="text-gray-500 italic">No quizzes are published yet.</p>
         ) : (
           <div className="grid gap-4">
             {quizzes.map((q) => (
-              <Card key={q.id} className="p-4 flex justify-between items-center">
+              <Card
+                key={q.id}
+                className="p-5 flex justify-between items-center bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all rounded-xl"
+              >
                 <div>
-                  <h2 className="text-lg font-semibold">{q.title}</h2>
+                  <h2 className="text-lg font-semibold text-gray-800">
+                    {q.title}
+                  </h2>
                   <p className="text-sm text-gray-600">
                     {q._count?.questions || 0} questions — {q.durationMinutes} mins
                   </p>
                 </div>
                 <div>
                   <Link href={`/quiz/${q.id}/instructions`}>
-                    <Button>Open</Button>
+                    <Button className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:opacity-90 text-white px-5 rounded-md">
+                      Open
+                    </Button>
                   </Link>
                 </div>
               </Card>
