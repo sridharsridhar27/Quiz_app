@@ -9,7 +9,7 @@ async function main() {
   // Step 1: Create quiz metadata
   const quiz = await prisma.quiz.create({
     data: {
-      title: "Finwise",
+      title: "IQvest",
       totalMarks: 100,
       durationMinutes: 45,
     },

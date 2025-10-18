@@ -1,332 +1,257 @@
 [
   {
-    "text": "Both equity shares and bonds represent capital raised by a company. The key difference is:",
+    "text": "In financial modeling, sensitivity analysis is used to:",
     "options": [
-      "Bonds provide ownership while equity provides debt.",
-      "Bonds offer fixed returns while equity offers variable returns.",
-      "Equity holders have priority during liquidation.",
-      "Both carry equal risk."
-    ],
-    "correctOption": 1
-  },
-  {
-    "text": "Which of the following instruments can be used to hedge both equity price risk and interest rate risk?",
-    "options": [
-      "Forward contracts",
-      "Convertible bonds",
-      "Preference shares",
-      "Government securities"
-    ],
-    "correctOption": 1
-  },
-  {
-    "text": "Which factor simultaneously affects the price of equity shares, bond yields, and derivative valuations?",
-    "options": ["Inflation", "Dividend payout ratio", "Asset turnover ratio", "Book value per share"],
-    "correctOption": 0
-  },
-  {
-    "text": "When interest rates rise sharply, which of the following is most likely to occur simultaneously?",
-    "options": [
-      "Bond prices rise, equity P/E ratios expand.",
-      "Bond prices fall, equity valuations compress.",
-      "Bond prices rise, call option premiums rise.",
-      "Bond prices and equity prices both rise."
-    ],
-    "correctOption": 1
-  },
-  {
-    "text": "Which of the following securities directly combines fixed income and derivative characteristics?",
-    "options": ["Treasury Bill", "Convertible Debenture", "Common Stock", "Commercial Paper"],
-    "correctOption": 1
-  },
-  {
-    "text": "If a company’s bond yields are rising while its equity options show higher implied volatility, it indicates:",
-    "options": [
-      "Decreasing risk perception in the market.",
-      "Increasing credit and equity risk for the issuer.",
-      "Stable financial condition.",
-      "Market expects stable interest rates."
-    ],
-    "correctOption": 1
-  },
-  {
-    "text": "A convertible bond is currently trading close to its conversion value. This implies:",
-    "options": [
-      "The equity market is performing poorly.",
-      "The bond’s fixed-income component dominates its valuation.",
-      "The stock price is high enough that conversion is valuable.",
-      "The bond is near default."
-    ],
-    "correctOption": 2
-  },
-  {
-    "text": "When the risk-free rate (from the bond market) decreases, keeping all else constant, what happens to Call Option premiums and Equity valuations?",
-    "options": [
-      "Both increase",
-      "Both decrease",
-      "Call options decrease; equities increase",
-      "Call options increase; equities decrease"
+      "Test how changes in input variables affect model outputs",
+      "Determine the probability distribution of outcomes",
+      "Calculate the internal rate of return",
+      "Optimize portfolio allocation"
     ],
     "correctOption": 0
   },
   {
-    "text": "A trader holds a portfolio of long equities and short bond futures. What kind of macro risk is the trader hedging?",
-    "options": ["Credit risk", "Interest rate risk", "Currency risk", "Market risk"],
+    "text": "Which measure indicates the total systematic risk of a portfolio?",
+    "options": ["Alpha", "Beta", "R-squared", "Sharpe Ratio"],
     "correctOption": 1
   },
   {
-    "text": "According to the Capital Asset Pricing Model (CAPM), if the risk-free rate is derived from bond yields and the market return reflects equity performance, which derivative metric uses both in its valuation?",
-    "options": ["Vega", "Delta", "Option Premium (via Black-Scholes)", "Duration"],
-    "correctOption": 2
-  },
-  {
-    "text": "Which of the following best describes Equity Shares?",
-    "options": [
-      "Debt instruments providing fixed interest",
-      "Ownership interest in a company",
-      "Preference shares with guaranteed dividends",
-      "Short-term promissory notes"
-    ],
-    "correctOption": 1
-  },
-  {
-    "text": "What does “IPO” stand for in the stock market?",
-    "options": [
-      "Institutional Public Offering",
-      "Initial Private Offering",
-      "Initial Public Offering",
-      "Indexed Portfolio Opportunity"
-    ],
-    "correctOption": 2
-  },
-  {
-    "text": "Which financial market primarily deals with trading of equity securities?",
-    "options": ["Money Market", "Capital Market", "Derivatives Market", "Commodity Market"],
-    "correctOption": 1
-  },
-  {
-    "text": "A company has an EPS (Earnings per Share) of ₹10 and a P/E ratio of 20. What is its market price per share?",
-    "options": ["₹100", "₹200", "₹20", "₹2"],
-    "correctOption": 1
-  },
-  {
-    "text": "If a company declares a 2-for-1 stock split, how does it affect the number of shares and share price?",
-    "options": [
-      "Shares double, price doubles",
-      "Shares double, price halves",
-      "Shares halve, price doubles",
-      "Shares and price remain same"
-    ],
-    "correctOption": 1
-  },
-  {
-    "text": "Which of the following best represents the book value per share (BVPS) formula?",
-    "options": [
-      "Total Assets ÷ Total Liabilities",
-      "(Total Assets - Total Liabilities) ÷ Total Shares Outstanding",
-      "Total Revenue ÷ Total Shares",
-      "(Market Cap - Liabilities) ÷ Total Shares"
-    ],
-    "correctOption": 1
-  },
-  {
-    "text": "Which of the following statements about Beta (β) in equity valuation is TRUE?",
-    "options": [
-      "Beta measures a company’s profitability ratio.",
-      "Beta shows how volatile a stock is relative to the market.",
-      "Beta indicates dividend payout stability.",
-      "Beta represents company leverage."
-    ],
-    "correctOption": 1
-  },
-  {
-    "text": "A portfolio has 50% invested in Stock A (β = 1.2) and 50% in Stock B (β = 0.8). What is the portfolio Beta?",
-    "options": ["1.0", "1.2", "0.8", "1.5"],
+    "text": "Which technique is commonly used for detecting anomalies in financial transaction data?",
+    "options": ["Clustering", "Principal Component Analysis", "Logistic Regression", "Exponential Smoothing"],
     "correctOption": 0
   },
   {
-    "text": "If a company’s ROE is consistently higher than its cost of equity, it indicates:",
-    "options": [
-      "The company is destroying shareholder value",
-      "The company is generating excess returns for shareholders",
-      "The company’s stock is overvalued",
-      "The company has high financial leverage"
-    ],
+    "text": "Which metric measures the proportion of variability in a dependent variable explained by the independent variables in regression?",
+    "options": ["P-value", "R-squared", "T-statistic", "Standard error"],
     "correctOption": 1
   },
   {
-    "text": "In the Dividend Discount Model (DDM), if the required rate of return equals the dividend growth rate, the value of the share is:",
-    "options": ["Infinity", "Zero", "Equal to the dividend amount", "Undefined"],
-    "correctOption": 3
-  },
-  {
-    "text": "Which of the following best describes a derivative?",
-    "options": [
-      "A security that gives ownership in a company",
-      "A financial instrument whose value is derived from an underlying asset",
-      "A fixed-income instrument issued by the government",
-      "A cash-equivalent instrument used for short-term borrowing"
-    ],
-    "correctOption": 1
-  },
-  {
-    "text": "Which of the following is not an example of a derivative instrument?",
-    "options": ["Futures", "Options", "Bonds", "Forwards"],
-    "correctOption": 2
-  },
-  {
-    "text": "The main purpose of using derivatives in financial markets is to:",
-    "options": [
-      "Increase capital expenditure",
-      "Hedge against risk or speculate",
-      "Improve accounting transparency",
-      "Reduce market liquidity"
-    ],
-    "correctOption": 1
-  },
-  {
-    "text": "In a Futures contract, which statement is TRUE?",
-    "options": [
-      "The contract is customized and traded over-the-counter",
-      "Futures are standardized and traded on an exchange",
-      "Futures are only traded between banks",
-      "Futures always require physical delivery"
-    ],
-    "correctOption": 1
-  },
-  {
-    "text": "A trader buys a Call Option with a strike price of ₹100. If the market price rises to ₹120, the intrinsic value of the option is:",
-    "options": ["₹0", "₹10", "₹20", "₹120"],
-    "correctOption": 2
-  },
-  {
-    "text": "The initial margin in futures trading is best described as:",
-    "options": [
-      "The maximum loss a trader can incur",
-      "A deposit to cover potential losses",
-      "The commission charged by the exchange",
-      "The price of the contract itself"
-    ],
-    "correctOption": 1
-  },
-  {
-    "text": "If a futures contract on NIFTY trades at a premium to the spot index, it indicates:",
-    "options": [
-      "Arbitrage opportunity due to underpricing",
-      "Normal contango condition",
-      "Market expecting a fall in NIFTY",
-      "Market in backwardation"
-    ],
-    "correctOption": 1
-  },
-  {
-    "text": "A trader sells one futures contract of stock XYZ at ₹1,000. The contract size is 100 shares. If the price falls to ₹950 before expiry, what is the trader’s profit?",
-    "options": ["₹5,000", "₹50", "₹500", "₹10,000"],
+    "text": "In risk-adjusted performance measurement, what does the Treynor Ratio use instead of standard deviation?",
+    "options": ["Beta", "Alpha", "Variance", "Skewness"],
     "correctOption": 0
   },
   {
-    "text": "Which of the following statements about Option Greeks is correct?",
+    "text": "The Capital Asset Pricing Model (CAPM) assumes which of the following?",
     "options": [
-      "Delta measures the change in option price with respect to volatility.",
-      "Gamma measures the rate of change of Delta with respect to the underlying price.",
-      "Vega measures sensitivity to time decay.",
-      "Theta measures sensitivity to interest rates."
+      "Investors are risk-seeking",
+      "Markets are inefficient",
+      "There is a risk-free rate and investors can borrow or lend at it",
+      "Investors have different expectations of returns"
     ],
+    "correctOption": 2
+  },
+  {
+    "text": "Which of the following represents unsystematic risk?",
+    "options": [
+      "Changes in interest rates",
+      "Inflation volatility",
+      "Company-specific management decisions",
+      "Currency fluctuations"
+    ],
+    "correctOption": 2
+  },
+  {
+    "text": "In credit risk modeling, which statistical method is often used to estimate default probability?",
+    "options": ["Decision Tree", "Logistic Regression", "K-Means Clustering", "Random Forest Regression"],
     "correctOption": 1
   },
   {
-    "text": "According to the Put-Call Parity principle, which equation holds true for European options (on non-dividend-paying stock)?",
+    "text": "What is the key purpose of backtesting in financial analytics?",
     "options": [
-      "C + PV(X) = P + S",
-      "C + S = P + PV(X)",
-      "C - P = PV(X) - S",
-      "P + PV(X) = C + S"
-    ],
-    "correctOption": 3
-  },
-  {
-    "text": "What is a bond?",
-    "options": [
-      "A short-term equity security",
-      "A debt instrument representing a loan made by an investor to a borrower",
-      "A derivative contract on equity",
-      "A foreign exchange instrument"
-    ],
-    "correctOption": 1
-  },
-  {
-    "text": "The coupon rate of a bond refers to:",
-    "options": [
-      "The annual interest rate paid on the bond’s face value",
-      "The bond’s yield to maturity",
-      "The interest rate offered by the bank",
-      "The market rate of interest"
+      "To validate a trading strategy using historical data",
+      "To calculate future risk-free rates",
+      "To remove multicollinearity",
+      "To forecast future inflation rates"
     ],
     "correctOption": 0
   },
   {
-    "text": "When a bond is sold at a premium, it means:",
+    "text": "A company's Altman Z-score is primarily used to:",
     "options": [
-      "Coupon rate > Market interest rate",
-      "Coupon rate < Market interest rate",
-      "Coupon rate = Market interest rate",
-      "The bond has defaulted"
+      "Measure credit default risk",
+      "Predict stock returns",
+      "Evaluate market volatility",
+      "Estimate dividend yield"
     ],
     "correctOption": 0
   },
   {
-    "text": "A ₹1,000 face value bond pays a 10% annual coupon and has 5 years to maturity. If the market rate is 8%, the bond will trade at:",
-    "options": ["Par value", "Premium", "Discount", "Zero value"],
-    "correctOption": 1
-  },
-  {
-    "text": "What is the Yield to Maturity (YTM) of a bond?",
+    "text": "In portfolio management, diversification helps to:",
     "options": [
-      "The average annual coupon payment",
-      "The total return expected if held to maturity",
-      "The current yield minus coupon rate",
-      "The interest rate offered by a bank"
+      "Increase systematic risk",
+      "Eliminate all risks",
+      "Reduce unsystematic risk",
+      "Guarantee higher returns"
     ],
-    "correctOption": 1
-  },
-  {
-    "text": "The duration of a bond measures:",
-    "options": [
-      "The bond’s time to maturity",
-      "The sensitivity of bond price to changes in interest rates",
-      "The number of coupon payments left",
-      "The volatility of bond returns"
-    ],
-    "correctOption": 1
-  },
-  {
-    "text": "If a bond’s duration is 6 years, and market interest rates rise by 1%, the approximate percentage fall in the bond price will be:",
-    "options": ["0.6%", "3%", "6%", "12%"],
     "correctOption": 2
   },
   {
-    "text": "Which of the following correctly defines the relationship between yield and bond price?",
+    "text": "Which of the following metrics measures excess return relative to the risk-free rate per unit of total risk?",
+    "options": ["Alpha", "Treynor Ratio", "Sharpe Ratio", "Information Ratio"],
+    "correctOption": 2
+  },
+  {
+    "text": "What does a positive alpha indicate in portfolio performance?",
     "options": [
-      "Direct relationship",
-      "Inverse relationship",
-      "No relationship",
-      "Constant relationship"
+      "The portfolio underperformed the benchmark",
+      "The portfolio outperformed the benchmark on a risk-adjusted basis",
+      "The portfolio has high beta risk",
+      "The portfolio is inefficient"
     ],
     "correctOption": 1
   },
   {
-    "text": "A bond with higher convexity compared to another will:",
+    "text": "Which data preprocessing step is most important before applying regression on financial data?",
+    "options": ["Data normalization", "Outlier addition", "Variable duplication", "Random sampling"],
+    "correctOption": 0
+  },
+  {
+    "text": "In options pricing, the Black-Scholes model assumes:",
     "options": [
-      "Be less sensitive to interest rate changes",
-      "Be more sensitive to interest rate changes but recover faster",
-      "Have lower price volatility",
-      "Always trade at a discount"
+      "Stock prices follow a geometric Brownian motion",
+      "Volatility changes unpredictably",
+      "Markets are always irrational",
+      "Dividends grow exponentially"
+    ],
+    "correctOption": 0
+  },
+  {
+    "text": "In time-series finance, what does stationarity imply?",
+    "options": [
+      "The mean and variance remain constant over time",
+      "Data shows random drift",
+      "The trend fluctuates exponentially",
+      "Residuals are heteroscedastic"
+    ],
+    "correctOption": 0
+  },
+  {
+    "text": "Which financial ratio measures how effectively a company uses its equity to generate profit?",
+    "options": ["Return on Assets", "Current Ratio", "Return on Equity", "Debt Ratio"],
+    "correctOption": 2
+  },
+  {
+    "text": "When conducting scenario analysis, the 'worst-case' scenario is used to:",
+    "options": [
+      "Model maximum possible profit",
+      "Assess risk exposure under extreme conditions",
+      "Estimate expected value under normal distribution",
+      "Ignore market volatility"
     ],
     "correctOption": 1
   },
   {
-    "text": "A zero-coupon bond with face value ₹1,000 and 5 years to maturity is priced at ₹700. What is its approximate annual yield?",
-    "options": ["5%", "7.2%", "8%", "9.5%"],
-    "correctOption": 3
+    "text": "Which statistical distribution is commonly used to model financial returns?",
+    "options": ["Normal distribution", "Uniform distribution", "Binomial distribution", "Exponential distribution"],
+    "correctOption": 0
+  },
+  {
+    "text": "In financial analytics, what does covariance measure?",
+    "options": [
+      "How two assets move together",
+      "The volatility of a single asset",
+      "The risk-free rate of return",
+      "The degree of market efficiency"
+    ],
+    "correctOption": 0
+  },
+  {
+    "text": "Which financial metric best indicates a company's ability to generate profit from its total assets?",
+    "options": ["Return on Equity (ROE)", "Return on Assets (ROA)", "Net Profit Margin", "Operating Margin"],
+    "correctOption": 1
+  },
+  {
+    "text": "In discounted cash flow (DCF) analysis, what is the primary purpose of using the discount rate?",
+    "options": ["To adjust for inflation", "To reflect the time value of money and risk", "To calculate depreciation", "To determine tax liability"],
+    "correctOption": 1
+  },
+  {
+    "text": "What does a high P/E ratio typically indicate about a stock?",
+    "options": ["The stock is undervalued", "The company has low growth potential", "The market expects future growth", "The company has poor earnings performance"],
+    "correctOption": 2
+  },
+  {
+    "text": "What is the main difference between technical and fundamental analysis?",
+    "options": ["Technical analysis focuses on macroeconomic data; fundamental focuses on price charts", "Technical uses historical prices; fundamental analyzes financial statements", "Fundamental focuses on investor psychology; technical on company reports", "Both are identical in approach"],
+    "correctOption": 1
+  },
+  {
+    "text": "In portfolio optimization, the efficient frontier represents portfolios that:",
+    "options": ["Maximize return for a given level of risk", "Minimize return for a given level of risk", "Have no diversification", "Contain only risk-free assets"],
+    "correctOption": 0
+  },
+  {
+    "text": "Which of the following best defines beta in the context of CAPM?",
+    "options": ["The volatility of a stock relative to the market", "The average return of a portfolio", "The company's debt-to-equity ratio", "The rate of inflation"],
+    "correctOption": 0
+  },
+  {
+    "text": "What does a negative correlation between two assets imply in portfolio analysis?",
+    "options": ["They move together in the same direction", "They move in opposite directions", "They have identical risk levels", "They have equal expected returns"],
+    "correctOption": 1
+  },
+  {
+    "text": "Which statistical technique is most suitable for predicting stock price movements using past data?",
+    "options": ["Linear regression", "Monte Carlo simulation", "Variance analysis", "Ratio analysis"],
+    "correctOption": 0
+  },
+  {
+    "text": "In time series forecasting of financial data, which model assumes past values influence future values linearly?",
+    "options": ["ARIMA", "Decision Tree", "K-Means", "Random Forest"],
+    "correctOption": 0
+  },
+  {
+    "text": "In financial risk management, Value at Risk (VaR) measures:",
+    "options": ["Expected profit in a given period", "Maximum potential loss at a given confidence level", "Average market volatility", "Total debt exposure"],
+    "correctOption": 1
+  },
+  {
+    "text": "What is the main advantage of using Monte Carlo simulation in financial modeling?",
+    "options": ["It eliminates all risks", "It provides deterministic outcomes", "It models uncertainty using random sampling", "It replaces fundamental analysis"],
+    "correctOption": 2
+  },
+  {
+    "text": "In regression-based financial analysis, multicollinearity occurs when:",
+    "options": ["Independent variables are highly correlated", "Dependent variable has outliers", "Residuals are normally distributed", "Data is heteroscedastic"],
+    "correctOption": 0
+  },
+  {
+    "text": "What is the Sharpe Ratio used to evaluate?",
+    "options": ["Portfolio diversification", "Risk-adjusted return", "Market efficiency", "Company valuation"],
+    "correctOption": 1
+  },
+  {
+    "text": "Which statement about financial leverage is true?",
+    "options": ["High leverage reduces financial risk", "Leverage increases potential returns and losses", "Leverage has no effect on profitability", "Leverage only affects liquidity"],
+    "correctOption": 1
+  },
+  {
+    "text": "In corporate finance, the Weighted Average Cost of Capital (WACC) represents:",
+    "options": ["The cost of debt only", "The average rate a company must pay to finance its assets", "The total revenue minus expenses", "The company’s break-even rate"],
+    "correctOption": 1
+  },
+  {
+    "text": "When analyzing big financial datasets, which technique helps reduce dimensionality without losing key variance?",
+    "options": ["Regression analysis", "Principal Component Analysis (PCA)", "Time series smoothing", "Exponential weighting"],
+    "correctOption": 1
+  },
+  {
+    "text": "A bond's duration measures:",
+    "options": ["Its time to maturity", "Its sensitivity to interest rate changes", "Its coupon payment frequency", "Its default probability"],
+    "correctOption": 1
+  },
+  {
+    "text": "What does heteroscedasticity indicate in a financial regression model?",
+    "options": ["Variance of errors is constant", "Errors have unequal variance", "Variables are perfectly correlated", "Model fits data perfectly"],
+    "correctOption": 1
+  },
+  {
+    "text": "Which ratio is most useful for evaluating a company’s ability to meet short-term obligations?",
+    "options": ["Current ratio", "Debt-to-equity ratio", "Return on assets", "Price-to-book ratio"],
+    "correctOption": 0
+  },
+  {
+    "text": "In financial analytics, scenario analysis is primarily used to:",
+    "options": ["Estimate historical trends", "Model potential future outcomes under different assumptions", "Remove outliers from data", "Calculate fixed income yields"],
+    "correctOption": 1
   }
 ]
