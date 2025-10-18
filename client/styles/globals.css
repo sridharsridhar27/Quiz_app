@@ -11,38 +11,15 @@
 }
 
 /* ---------------------- */
-/* 🛡️ Force Consistent Light/Dark Handling */
-/* ---------------------- */
-/* Prevent browsers (like Chrome/Edge) from auto inverting colors */
-html {
-  color-scheme: light dark; /* enables proper theme awareness */
-  forced-color-adjust: none !important; /* stop automatic inversion */
-}
-
-/* ---------------------- */
-/* 🌙 Dark Mode Variables */
-/* ---------------------- */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-blue-50: #0f172a; /* dark navy bg */
-    --color-indigo-100: #1e293b;
-    --color-gray-900: #f9fafb; /* light gray text */
-    --color-gray-50: #111827; /* dark background */
-  }
-
-  body {
-    background-image: linear-gradient(
-      to bottom right,
-      var(--color-blue-50),
-      var(--color-indigo-100)
-    );
-    color: var(--color-gray-900); /* ensure text visible in dark mode */
-  }
-}
-
-/* ---------------------- */
 /* 🧱 Global Styles       */
 /* ---------------------- */
+html, body {
+  color-scheme: light !important;
+  forced-color-adjust: none !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
 body {
   background-image: linear-gradient(
     to bottom right,
@@ -91,7 +68,7 @@ p {
 
 /* 🎨 Card and Container Utilities */
 .card {
-  @apply bg-white shadow-lg rounded-xl p-6 dark:bg-gray-800;
+  @apply bg-white shadow-lg rounded-xl p-6;
 }
 
 .container {
