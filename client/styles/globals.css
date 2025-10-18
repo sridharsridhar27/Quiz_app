@@ -11,15 +11,20 @@
 }
 
 /* ---------------------- */
-/* 🧱 Global Styles       */
+/* 🌙 Dark Mode Variables */
 /* ---------------------- */
-html, body {
-  color-scheme: light !important;
-  forced-color-adjust: none !important;
-  background-color: #ffffff !important;
-  color: #000000 !important;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-blue-50: #111827;
+    --color-indigo-100: #1e293b;
+    --color-gray-900: #f9fafb;
+    --color-gray-50: #111827;
+  }
 }
 
+/* ---------------------- */
+/* 🧱 Global Styles       */
+/* ---------------------- */
 body {
   background-image: linear-gradient(
     to bottom right,
@@ -68,7 +73,7 @@ p {
 
 /* 🎨 Card and Container Utilities */
 .card {
-  @apply bg-white shadow-lg rounded-xl p-6;
+  @apply bg-white shadow-lg rounded-xl p-6 dark:bg-gray-800;
 }
 
 .container {
