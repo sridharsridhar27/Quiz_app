@@ -4,10 +4,11 @@
 /* 🌈 Base Theme Colors   */
 /* ---------------------- */
 :root {
-  --color-blue-50: #eff6ff;
-  --color-indigo-100: #e0e7ff;
-  --color-gray-900: #111827;
-  --color-gray-50: #f9fafb;
+  --color-bg-light: #ffffff;
+  --color-text-light: #111827;
+
+  --color-bg-dark: #111827;
+  --color-text-dark: #f9fafb;
 }
 
 /* ---------------------- */
@@ -15,10 +16,8 @@
 /* ---------------------- */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-blue-50: #1e293b;
-    --color-indigo-100: #111827;
-    --color-gray-900: #f9fafb;
-    --color-gray-50: #111827;
+    --color-bg-light: #111827;
+    --color-text-light: #f9fafb;
   }
 }
 
@@ -26,17 +25,11 @@
 /* 🧱 Global Styles       */
 /* ---------------------- */
 body {
-  background-image: linear-gradient(
-    to bottom right,
-    var(--color-blue-50),
-    var(--color-indigo-100)
-  );
-  color: var(--color-gray-900);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
   @apply min-h-screen antialiased transition-colors duration-300 ease-in-out;
-  background-color: #f9fafb !important;
-  color: #111827 !important;
-
 }
 
 /* ---------------------- */
@@ -46,7 +39,7 @@ input,
 button,
 select,
 textarea {
-  @apply transition-all duration-200 ease-in-out;
+  @apply transition-all duration-200 ease-in-out rounded-md border border-gray-300 dark:border-gray-700 px-3 py-2;
 }
 
 /* 🎯 Responsive Typography */
@@ -54,7 +47,7 @@ h1,
 h2,
 h3,
 h4 {
-  @apply font-bold tracking-tight;
+  @apply font-semibold tracking-tight;
 }
 
 h1 {
@@ -75,9 +68,9 @@ p {
 
 /* 🎨 Card and Container Utilities */
 .card {
-  @apply bg-white shadow-lg rounded-xl p-6 dark:bg-gray-800;
+  @apply bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 shadow-md rounded-xl p-6;
 }
 
 .container {
-  @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+  @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
 }
